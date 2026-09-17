@@ -84,3 +84,18 @@ a:focus-visible {
   border-bottom: 2px solid transparent;
 }
 
+.menu a:hover {
+  border-bottom-color: var(--kiemeles);
+}
+
+/* bemutatkozo */
+
+main {
+  display: block;
+}
+
+.hero{
+  max-width: var(--szeles);
+  margin: auto;
+  padding: 4.5rem, 1.5rem, 3.5rem;
+}
