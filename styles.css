@@ -99,3 +99,36 @@ main {
   margin: auto;
   padding: 4.5rem, 1.5rem, 3.5rem;
 }
+
+.hero-felutes {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--tinta-halvany);
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  letter-spacing: -0.02em;
+}
+
+.hero-leiras {
+  font-size: 1.15rem;
+  color: var(--tinta-halvany);
+  margin-top: 1.5rem;
+}
+
+.hero-gombok {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  max-width: none;
+}
+
+.gomb {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--tinta);
+  color: var(--tinta);
+  text-decoration: none;
+  font-weight: 500;
+}
