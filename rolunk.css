@@ -1,0 +1,256 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: white;
+}
+
+
+/* Fejléc */
+
+.fejlec {
+    background-color: #161b22;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #30363d;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-jel {
+    background-color: #2196f3;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.logo-nev {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Menü */
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #2196f3;
+}
+
+
+/* Fő tartalom */
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+
+/* Oldal címe */
+
+.oldalcim {
+    padding: 60px 0;
+    border-bottom: 1px solid #30363d;
+}
+
+.oldalcim h1 {
+    font-size: 50px;
+    color: #2196f3;
+}
+
+.oldalcim p {
+    font-size: 18px;
+    color: #cccccc;
+    max-width: 700px;
+}
+
+
+/* Szekciók */
+
+.adatok,
+.elerhetoseg,
+.csapat {
+    padding: 50px 0;
+    border-bottom: 1px solid #30363d;
+}
+
+h2 {
+    color: #2196f3;
+    font-size: 30px;
+}
+
+
+/* Céges adatok */
+
+.adatlista {
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.adatsor {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #30363d;
+}
+
+.adatsor:last-child {
+    border-bottom: none;
+}
+
+.adatsor dt {
+    width: 200px;
+    font-weight: bold;
+    color: #2196f3;
+}
+
+.adatsor dd {
+    margin: 0;
+    color: #dddddd;
+}
+
+
+/* Elérhetőség */
+
+.cim {
+    background-color: #161b22;
+    padding: 25px;
+    border-radius: 10px;
+    font-style: normal;
+}
+
+.cim a {
+    color: #2196f3;
+    text-decoration: none;
+}
+
+.cim a:hover {
+    text-decoration: underline;
+}
+
+
+/* Csapattagok */
+
+.racs {
+    display: flex;
+    gap: 25px;
+}
+
+.tag {
+    background-color: #161b22;
+    padding: 25px;
+    border-radius: 10px;
+    width: 50%;
+    border: 1px solid #30363d;
+}
+
+.tag:hover {
+    border-color: #2196f3;
+}
+
+.tag-monogram {
+    background-color: #2196f3;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.tag h3 {
+    font-size: 24px;
+}
+
+.tag-szerep {
+    color: #2196f3;
+    font-weight: bold;
+}
+
+.tag p {
+    color: #cccccc;
+}
+
+
+/* Lábléc */
+
+.lablec {
+    background-color: #080b0f;
+    text-align: center;
+    padding: 40px;
+    color: #999999;
+}
+
+.lablec-nev {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lablec a {
+    color: #2196f3;
+    text-decoration: none;
+}
+
+
+/* Telefonos nézet */
+
+@media (max-width: 700px) {
+
+    .fejlec {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .racs {
+        flex-direction: column;
+    }
+
+    .tag {
+        width: 100%;
+    }
+
+    .adatsor {
+        flex-direction: column;
+    }
+
+    .adatsor dt {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    main {
+        width: 90%;
+    }
+}
