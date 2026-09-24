@@ -75,6 +75,77 @@ body {
     font-size: 1.1rem;
 }
 
+@font-face {
+  font-family: 'sajatfont'; /* Ezen a néven hivatkozol rá később */
+  src: url('ghastly_panic.ttf') format('truetype'); /* A fájl pontos útvonala */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.motto h1{
+    text-align: center;
+  font-family: 'sajatfont';
+  font-size: 7.5rem;
+  color: #762181;
+}
+
+.motto h2{
+    text-align: center;
+    font-family: Garamond, serif;
+    font-size: 1.7rem;
+
+}
+
+/* Szekció és elrendezés */
+.kepek-szekcio {
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.kepek-kontener {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Mobilon automatikusan egymás alá ugranak */
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Kártya és kép formázás */
+.kep-kartya {
+  flex: 1 1 280px;
+  max-width: 360px;
+}
+
+.kep-kartya img {
+  width: 100%;
+  aspect-ratio: 4 / 5; /* Modern, álló formátumú képarány */
+  object-fit: cover;
+  
+  /* Modern aszimmetrikus lekerekítés (nem szögletes kocka) */
+  border-radius: 45px 12px 45px 12px;
+  
+  /* Lágy, lebegő árnyék és finom szegély */
+  box-shadow: 0 20px 35px -10px rgba(79, 70, 229, 0.25);
+  border: 3px solid #ffffff;
+  
+  /* Sima átmenet az animációhoz */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* A második kép tükrözött formát kap a ritmus kedvéért */
+.kep-kartya:nth-child(2) img {
+  border-radius: 12px 45px 12px 45px;
+}
+
+/* Interaktív effekt (egérrámutatáskor) */
+.kep-kartya img:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 28px 45px -12px rgba(79, 70, 229, 0.4);
+  border-radius: 28px; /* Rámutatáskor visszalágyul egyenletes formára */
+}
 
 /* ==========================================
    Navigáció
