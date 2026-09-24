@@ -1,125 +1,177 @@
 
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+
+    --accent-light: #e0e7ff;
+    --border-color: #e2e8f0;
+
+    --radius-sm: 8px;
+    --radius-lg: 16px;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Alap beállítások */
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #0d1117;
-    color: white;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
 
-/* Fejléc */
+/* ==========================================
+   Fejléc
+========================================== */
 
 .fejlec {
-    background-color: #161b22;
-    padding: 20px 8%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #30363d;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.75rem;
+
     text-decoration: none;
-    color: white;
+    color: var(--text-main);
+    font-weight: bold;
 }
 
 .logo-jel {
-    background-color: #2196f3;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: bold;
+    background: linear-gradient(135deg, var(--primary), #8b5cf6);
+    color: white;
+
+    padding: 0.5rem 0.7rem;
+    border-radius: var(--radius-sm);
+
+    font-size: 0.85rem;
 }
 
 .logo-nev {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 
-/* Menü */
+/* ==========================================
+   Navigáció
+========================================== */
 
 .menu ul {
-    list-style-type: none;
     display: flex;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    gap: 1.5rem;
 }
 
 .menu a {
-    color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    color: var(--text-muted);
+    font-weight: 500;
+
+    transition: color 0.2s;
 }
 
-.menu a:hover {
-    background-color: #2196f3;
+.menu a:hover,
+.menu a[aria-current="page"] {
+    color: var(--primary);
 }
 
 
-/* Fő tartalom */
+/* ==========================================
+   Fő tartalom
+========================================== */
 
 main {
-    width: 80%;
-    margin: auto;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
 }
 
 
-/* Oldal címe */
+/* ==========================================
+   Oldalcím
+========================================== */
 
 .oldalcim {
-    padding: 60px 0;
-    border-bottom: 1px solid #30363d;
+    text-align: center;
+
+    padding: 3rem 1rem 4rem;
+
+    max-width: 780px;
+    margin: 0 auto;
 }
 
 .oldalcim h1 {
-    font-size: 50px;
-    color: #2196f3;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .oldalcim p {
-    font-size: 18px;
-    color: #cccccc;
-    max-width: 700px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
 }
 
 
-/* Szekciók */
+/* ==========================================
+   Céges adatok
+========================================== */
 
-.adatok,
-.elerhetoseg,
-.csapat {
-    padding: 50px 0;
-    border-bottom: 1px solid #30363d;
+.adatok {
+    margin-top: 2rem;
 }
 
-h2 {
-    color: #2196f3;
-    font-size: 30px;
+.adatok h2,
+.elerhetoseg h2,
+.csapat h2 {
+    text-align: center;
+
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
 }
 
 
-/* Céges adatok */
+/* Adatok kártya */
 
 .adatlista {
-    background-color: #161b22;
-    padding: 20px;
-    border-radius: 10px;
+    background-color: var(--bg-card);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-md);
+
+    padding: 1rem;
 }
 
 .adatsor {
     display: flex;
-    padding: 15px;
-    border-bottom: 1px solid #30363d;
+
+    padding: 1rem;
+
+    border-bottom: 1px solid var(--border-color);
 }
 
 .adatsor:last-child {
@@ -128,129 +180,211 @@ h2 {
 
 .adatsor dt {
     width: 200px;
+
     font-weight: bold;
-    color: #2196f3;
+    color: var(--primary);
 }
 
 .adatsor dd {
-    margin: 0;
-    color: #dddddd;
+    color: var(--text-muted);
 }
 
 
-/* Elérhetőség */
+/* ==========================================
+   Elérhetőség
+========================================== */
+
+.elerhetoseg {
+    margin-top: 4rem;
+}
 
 .cim {
-    background-color: #161b22;
-    padding: 25px;
-    border-radius: 10px;
+    background-color: var(--bg-card);
+
+    padding: 2rem;
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-md);
+
     font-style: normal;
 }
 
+.cim p {
+    margin-bottom: 0.8rem;
+}
+
+.cim p:last-child {
+    margin-bottom: 0;
+}
+
+.cim strong {
+    color: var(--text-main);
+}
+
 .cim a {
-    color: #2196f3;
+    color: var(--primary);
     text-decoration: none;
 }
 
 .cim a:hover {
+    color: var(--primary-hover);
     text-decoration: underline;
 }
 
 
-/* Csapattagok */
+/* ==========================================
+   Csapat
+========================================== */
+
+.csapat {
+    margin-top: 4rem;
+}
 
 .racs {
-    display: flex;
-    gap: 25px;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.5rem;
 }
 
 .tag {
-    background-color: #161b22;
-    padding: 25px;
-    border-radius: 10px;
-    width: 50%;
-    border: 1px solid #30363d;
+    background-color: var(--bg-card);
+
+    padding: 2rem;
+
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+
+    box-shadow: var(--shadow-md);
+
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .tag:hover {
-    border-color: #2196f3;
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow-md);
 }
 
+
+/* Monogram */
+
 .tag-monogram {
-    background-color: #2196f3;
     width: 55px;
     height: 55px;
-    border-radius: 50%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    background-color: var(--accent-light);
+    color: var(--primary);
+
+    border-radius: 50%;
+
     font-weight: bold;
+
+    margin-bottom: 1rem;
 }
 
 .tag h3 {
-    font-size: 24px;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
 }
 
 .tag-szerep {
-    color: #2196f3;
+    color: var(--primary);
     font-weight: bold;
+
+    margin-bottom: 1rem;
 }
 
-.tag p {
-    color: #cccccc;
+.tag > p:last-child {
+    color: var(--text-muted);
 }
 
 
-/* Lábléc */
+/* ==========================================
+   Lábléc
+========================================== */
 
 .lablec {
-    background-color: #080b0f;
     text-align: center;
-    padding: 40px;
-    color: #999999;
+
+    background-color: #ffffff;
+
+    border-top: 1px solid var(--border-color);
+
+    padding: 3rem 1.5rem;
+
+    color: var(--text-muted);
 }
 
 .lablec-nev {
-    color: white;
-    font-size: 20px;
+    color: var(--text-main);
+
+    font-size: 1.1rem;
     font-weight: bold;
+
+    margin-bottom: 0.5rem;
 }
 
 .lablec a {
-    color: #2196f3;
+    color: var(--primary);
     text-decoration: none;
 }
 
+.lablec a:hover {
+    text-decoration: underline;
+}
 
-/* Telefonos nézet */
+.lablec-kicsi {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
 
-@media (max-width: 700px) {
+
+/* ==========================================
+   Mobil nézet
+========================================== */
+
+@media (max-width: 640px) {
 
     .fejlec {
         flex-direction: column;
-        gap: 15px;
+        gap: 1.25rem;
+    }
+
+    .menu ul {
+        gap: 1rem;
+    }
+
+    .oldalcim {
+        padding: 2rem 0;
+    }
+
+    .oldalcim h1 {
+        font-size: 2.3rem;
+    }
+
+    .adatsor {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .adatsor dt {
+        width: 100%;
     }
 
     .racs {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .tag {
         width: 100%;
     }
-
-    .adatsor {
-        flex-direction: column;
-    }
-
-    .adatsor dt {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    main {
-        width: 90%;
-    }
 }
+```
