@@ -28,7 +28,7 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   min-height: 100vh;
-  background-color: #b0bcc9; /* Lágy, modern szürkés háttér */
+  background-color: #b0bcc9;
 }
 
 .fejlec {
@@ -234,54 +234,35 @@ main {
 
 .lablec {
   background-color: #1e293b;
-  /* Modern, sötétszürke/kék háttér (ízlés szerint módosítható) */
   color: #cbd5e1;
-  /* Világosszürke szövegszín a jó olvashatóságért */
   text-align: center;
-  /* Minden szöveget középre igazít */
   padding: 30px 20px;
-  /* Alsó-felső és oldalsó belső térköz */
   font-family: sans-serif;
-  /* Egyszerű, letisztult betűtípus */
   line-height: 1.6;
-  /* Kényelmes sorköz, hogy ne folyjanak össze a sorok */
 }
 
 .lablec-nev {
   font-size: 1.3rem;
-  /* Kiemelt méret a szervezet nevének */
   font-weight: bold;
-  /* Félkövér kiemelés */
   color: #ffffff;
-  /* Hófehér szín, hogy jobban kitűnjön */
   margin-bottom: 10px;
-  /* Távolság a név és a cím között */
 }
 
 .lablec a {
   color: #38bdf8;
-  /* Esztétikus világoskék szín a linkeknek (e-mail, telefon) */
   text-decoration: none;
-  /* Aláhúzás eltávolítása */
   transition: color 0.2s;
-  /* Finom átmenet az egér ráhúzásakor */
 }
 
-/* Egér ráhúzás effekt a linkeken */
 .lablec a:hover {
   color: #7dd3fc;
-  /* Picit világosabb kék, ha fölé viszed az egeret */
   text-decoration: underline;
-  /* Rámutatáskor megjelenik az aláhúzás */
 }
 
 .lablec-kicsi {
   font-size: 0.85rem;
-  /* Kisebb betűméret a copyright szövegnek */
   color: #94a3b8;
-  /* Halványabb szürke szín */
   margin-top: 15px;
-  /* Távolság a felső soroktól */
 }
 .folyamat {
   max-width: 1000px;
@@ -298,16 +279,15 @@ main {
   position: relative;
 }
 
-/* Modern rács (Grid) elrendezés */
+
 .lepesek {
-  list-style: none; /* Alapértelmezett számozás eltávolítása */
+  list-style: none; 
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Kétoszlopos elrendezés */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
-/* Egy-egy lépés kártya formázása */
 .lepesek li {
   background-color: #ffffff;
   border-radius: 12px;
@@ -318,27 +298,26 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Lebegés effekt (Hover) */
+
 .lepesek li:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Aszimmetrikus "szétszórt" hatás: a páros elemeket picit lejjebb toljuk */
+
 .lepesek li:nth-child(even) {
   margin-top: 40px;
 }
 
-/* Modern, nagy, halvány sorszámok a háttérben */
 .lepesek li::before {
   counter-increment: step-counter;
-  content: "0" counter(step-counter); /* 01, 02, 03... formátum */
+  content: "0" counter(step-counter);
   position: absolute;
   top: 15px;
   right: 20px;
   font-size: 3.5rem;
   font-weight: 900;
-  color: #e2e8f0; /* Halvány szürke szám */
+  color: #e2e8f0;
   z-index: 1;
   line-height: 1;
 }
@@ -361,12 +340,10 @@ main {
   z-index: 2;
 }
 
-/* Számláló alaphelyzetbe állítása a listán */
 .lepesek {
   counter-reset: step-counter;
 }
 
-/* Mobilnézet: telefonon egymás alá ugranak és eltűnik az eltolás */
 @media (max-width: 768px) {
   .lepesek {
     grid-template-columns: 1fr;
