@@ -1,4 +1,3 @@
-
 :root {
     --primary: #4f46e5;
     --primary-hover: #4338ca;
@@ -29,12 +28,19 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    line-height: 1.6;
-    min-height: 100vh;
+    background-color: #abb5c0
+    /* Lágy, modern szürkés háttér */
+    margin: 0;
+    /* Eltünteti a böngésző alapértelmezett margóit */
+    padding: 0;
+    font-family: sans-serif;
+    /* Alapértelmezett letisztult betűtípus */
+    color: #1e293b;
+    /* KIEGÉSZÍTÉS: Sötétszürke szövegszín */
+    transition: background-color 0.3s ease;
+    /* KIEGÉSZÍTÉS: Finom háttér-átmenet */
 }
+
 
 
 /* ==========================================
@@ -76,20 +82,22 @@ body {
 }
 
 @font-face {
-  font-family: 'sajatfont'; /* Ezen a néven hivatkozol rá később */
-  src: url('ghastly_panic.ttf') format('truetype'); /* A fájl pontos útvonala */
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'sajatfont';
+    /* Ezen a néven hivatkozol rá később */
+    src: url('ghastly_panic.ttf') format('truetype');
+    /* A fájl pontos útvonala */
+    font-weight: normal;
+    font-style: normal;
 }
 
-.motto h1{
+.motto h1 {
     text-align: center;
-  font-family: 'sajatfont';
-  font-size: 7.5rem;
-  color: #762181;
+    font-family: 'sajatfont';
+    font-size: 7.5rem;
+    color: #762181;
 }
 
-.motto h2{
+.motto h2 {
     text-align: center;
     font-family: Garamond, serif;
     font-size: 1.7rem;
@@ -98,53 +106,56 @@ body {
 
 /* Szekció és elrendezés */
 .kepek-szekcio {
-  padding: 3rem 1rem;
-  display: flex;
-  justify-content: center;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .kepek-kontener {
-  display: flex;
-  gap: 2.5rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* Mobilon automatikusan egymás alá ugranak */
-  max-width: 800px;
-  width: 100%;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Mobilon automatikusan egymás alá ugranak */
+    max-width: 800px;
+    width: 100%;
 }
 
 /* Kártya és kép formázás */
 .kep-kartya {
-  flex: 1 1 280px;
-  max-width: 360px;
+    flex: 1 1 280px;
+    max-width: 360px;
 }
 
 .kep-kartya img {
-  width: 100%;
-  aspect-ratio: 4 / 5; /* Modern, álló formátumú képarány */
-  object-fit: cover;
-  
-  /* Modern aszimmetrikus lekerekítés (nem szögletes kocka) */
-  border-radius: 45px 12px 45px 12px;
-  
-  /* Lágy, lebegő árnyék és finom szegély */
-  box-shadow: 0 20px 35px -10px rgba(79, 70, 229, 0.25);
-  border: 3px solid #ffffff;
-  
-  /* Sima átmenet az animációhoz */
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    /* Modern, álló formátumú képarány */
+    object-fit: cover;
+
+    /* Modern aszimmetrikus lekerekítés (nem szögletes kocka) */
+    border-radius: 45px 12px 45px 12px;
+
+    /* Lágy, lebegő árnyék és finom szegély */
+    box-shadow: 0 20px 35px -10px rgba(79, 70, 229, 0.25);
+    border: 3px solid #ffffff;
+
+    /* Sima átmenet az animációhoz */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* A második kép tükrözött formát kap a ritmus kedvéért */
 .kep-kartya:nth-child(2) img {
-  border-radius: 12px 45px 12px 45px;
+    border-radius: 12px 45px 12px 45px;
 }
 
 /* Interaktív effekt (egérrámutatáskor) */
 .kep-kartya img:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 28px 45px -12px rgba(79, 70, 229, 0.4);
-  border-radius: 28px; /* Rámutatáskor visszalágyul egyenletes formára */
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 28px 45px -12px rgba(79, 70, 229, 0.4);
+    border-radius: 28px;
+    /* Rámutatáskor visszalágyul egyenletes formára */
 }
 
 /* ==========================================
@@ -373,7 +384,7 @@ main {
     margin-bottom: 1rem;
 }
 
-.tag > p:last-child {
+.tag>p:last-child {
     color: var(--text-muted);
 }
 
@@ -383,38 +394,55 @@ main {
 ========================================== */
 
 .lablec {
+    background-color: #1e293b;
+    /* Modern, sötétszürke/kék háttér (ízlés szerint módosítható) */
+    color: #cbd5e1;
+    /* Világosszürke szövegszín a jó olvashatóságért */
     text-align: center;
-
-    background-color: #ffffff;
-
-    border-top: 1px solid var(--border-color);
-
-    padding: 3rem 1.5rem;
-
-    color: var(--text-muted);
+    /* Minden szöveget középre igazít */
+    padding: 30px 20px;
+    /* Alsó-felső és oldalsó belső térköz */
+    font-family: sans-serif;
+    /* Egyszerű, letisztult betűtípus */
+    line-height: 1.6;
+    /* Kényelmes sorköz, hogy ne folyjanak össze a sorok */
 }
 
 .lablec-nev {
-    color: var(--text-main);
-
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    /* Kiemelt méret a szervezet nevének */
     font-weight: bold;
-
-    margin-bottom: 0.5rem;
+    /* Félkövér kiemelés */
+    color: #ffffff;
+    /* Hófehér szín, hogy jobban kitűnjön */
+    margin-bottom: 10px;
+    /* Távolság a név és a cím között */
 }
 
 .lablec a {
-    color: var(--primary);
+    color: #38bdf8;
+    /* Esztétikus világoskék szín a linkeknek (e-mail, telefon) */
     text-decoration: none;
+    /* Aláhúzás eltávolítása */
+    transition: color 0.2s;
+    /* Finom átmenet az egér ráhúzásakor */
 }
 
+/* Egér ráhúzás effekt a linkeken */
 .lablec a:hover {
+    color: #7dd3fc;
+    /* Picit világosabb kék, ha fölé viszed az egeret */
     text-decoration: underline;
+    /* Rámutatáskor megjelenik az aláhúzás */
 }
 
 .lablec-kicsi {
-    margin-top: 1rem;
     font-size: 0.85rem;
+    /* Kisebb betűméret a copyright szövegnek */
+    color: #94a3b8;
+    /* Halványabb szürke szín */
+    margin-top: 15px;
+    /* Távolság a felső soroktól */
 }
 
 
@@ -458,4 +486,20 @@ main {
         width: 100%;
     }
 }
-```
+
+.kepeink {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kepeink img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+
+    /* Vízszintesen középen marad, függőlegesen pedig picit lejjebb hozza a vágást, hogy ne vágja le a fejet */
+    object-position: center 20%;
+}
